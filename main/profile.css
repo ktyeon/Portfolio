@@ -33,6 +33,19 @@
     border-radius: 5px;
 }
 
+.topC{
+    cursor:pointer; 
+    border: 1px; 
+    background-color: #46C2CB; 
+    color: aliceblue; 
+    width: 60px; 
+    height: 20px; 
+    align-items: flex-end;
+    border-radius: 5px;
+    text-align: center;
+    display: block; 
+    margin: 0px auto; 
+}
 
 
 
