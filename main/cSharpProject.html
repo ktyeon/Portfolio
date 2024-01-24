@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+    <title>CSharp Project</title>
+    <style>
+
+    #cSharpProject{
+        /* padding-left: 80px;    
+        padding-top: 40px;    
+        padding-bottom: 50px;  */
+        display: block; 
+        margin: 0px auto; 
+        width: 600px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    h3{
+        text-decoration: underline;
+    }
+
+
+    .topC{
+            cursor:pointer; 
+            border: 1px; 
+            background-color: #46C2CB; 
+            color: aliceblue; 
+            width: 60px; 
+            height: 20px; 
+            align-items: flex-end;
+            border-radius: 5px;
+            text-align: center;
+            display: block; 
+            margin: 0px auto; 
+        }
+
+    </style>
+
+    <div id="header">
+
+
+    </div>
+
+    <script>
+        async function fetchHtmlAsText(url) {
+        return await (await fetch(url)).text();
+    }
+    
+    async function importPage(target) {
+        document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
+    }
+
+    importPage("header");
+    </script>
+
+</head>
+<body>
+    
+    <div id="cSharpProject">
+
+        <h1>C# Simple Console Game project</h1>
+
+
+        <img src="../resources/ConsoleGame.gif" alt="console project" style="width: 600px;">
+
+        <br><br><br><br><br>
+
+        <h3>What it is</h3>
+       
+        <p>
+
+            This project is a simple console-based game implemented in C#. 
+            The game involves a player navigating through a falling object (enemy) to avoid collisions and accumulate points. 
+           
+
+
+        </p>
+
+
+        <h3>What I did</h3>
+
+        <p>
+
+            <h4>Console Application Development</h4>
+            Creating a console application familiarized me with the basic syntax and concepts of the C# language and the .NET framework.
+
+            <h4>Game Logic Implementation</h4>
+            Implementing the basic logic of the game provided hands-on experience with concepts such as user input handling and the game loop.
+
+            <h4>File I/O Operations</h4>
+            Storing and retrieving ranking information to and from a file enhanced my understanding of file input/output operations.
+
+            <h4>Random Number Generation</h4>
+            Utilizing the Random class to generate random positions for enemies in the game increased my experience with generating random numbers.
+
+            <h4>Code Organization into Multiple Files</h4>
+            Managing multiple classes, modularizing code, and considering code organization for better maintainability.
+
+            <h4>Threading and Game Loop Control</h4>
+            Using Thread.Sleep to control the speed of the game loop introduced basic threading concepts and how to control the flow of a game.
+
+            <h4>Console Window Control</h4>
+            Adjusting the size and position of the console window provided insights into controlling the console window.
+
+            <h4>Exception Handling</h4>
+            Handling exceptions in areas such as user input or file read/write operations improved the program's stability.
+
+        </p>
+
+        <img src="../resources/score.png" alt="console project" style="width: 600px;">
+
+
+
+        <br><br><br><br><br>
+               
+        <div class="topC"  onclick="window.scrollTo(0,0);">TOP</div>
+    </div>
+
+
+</body>
+</html>
