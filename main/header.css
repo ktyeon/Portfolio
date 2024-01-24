@@ -66,37 +66,3 @@ a {
     right: 32px;
     font-size: 24px;
 }
-
-@media screen and (max-width: 600px) {
-    .navbar__menu {
-        display: none; 
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #46C2CB;
-        padding: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar__menu.show {
-        display: flex;  
-    }
-
-    .navbar__menu li {
-        padding: 8px;
-        text-align: center;
-        border-bottom: 1px solid #f0f4f5;
-    }
-
-    .navbar__toggle {
-        display: block;  
-        padding: 8px;
-        cursor: pointer; 
-    }
-
-    .fa-bars {
-        color: white; 
-    }
-}
