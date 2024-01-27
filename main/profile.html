@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="profile.css">
 
     <title>Profile</title>
 
@@ -98,28 +99,13 @@
         }
     </style>
 
-
-    <script>
-
-    async function importPage(target) {
-        const targetElement = document.querySelector('#' + target);
-
-        if (targetElement) {
-            targetElement.innerHTML = await fetchHtmlAsText(target + '.html');
-        } else {
-            console.error('Element with ID ' + target + ' not found.');
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        importPage("header");
-    });
-    </script>
 </head>
 
 <body>
 
-    <div id="header"></div>
+    <div id="header">
+
+    </div>
 
     <script>
         async function fetchHtmlAsText(url) {
