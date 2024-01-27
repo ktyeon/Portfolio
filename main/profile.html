@@ -1,191 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profile.css">
     <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
-    
+
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
-    
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="profile.css">
 
-     -->
     <title>Profile</title>
 
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tableDetail {
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 600px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1,
+        h3,
+        h4,
+        h5 {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 15.5px;
+        }
+
+        button {
+            background-color: crimson;
+            color: white;
+            width: 75px;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .topC {
+            cursor: pointer;
+            border: 1px;
+            background-color: #46C2CB;
+            color: aliceblue;
+            width: 60px;
+            height: 20px;
+            align-items: flex-end;
+            border-radius: 5px;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        /* Media queries for smaller screens */
+        @media only screen and (max-width: 600px) {
+            .tableDetail {
+                width: 100%;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h3,
+            h4,
+            h5 {
+                font-size: 1.2em;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+
 </head>
+
 <body>
 
-
     <div id="header">
-       
+
     </div>
 
     <script>
-         async function fetchHtmlAsText(url) {
+        async function fetchHtmlAsText(url) {
             return await (await fetch(url)).text();
         }
-        
+
         async function importPage(target) {
-            document.querySelector('#' + target).innerHTML = await fetchHtmlAsText( target + '.html');
+            document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
         }
 
         importPage("header");
 
     </script>
-  
 
     <div class="tableDetail">
-
 
         <h1>Profile</h1>
         <h5>World > Canada > IT > Developer</h5>
 
-
-            <table>
-
-                <tr> 
-                    <td rowspan="6">
-                        <img src="../resources/bubble-gum-woman-travels-and-takes-a-selfie.png" alt="selfie" onclick="javascript:location.href='//icons8.com/illustrations/illustration/bubble-gum-woman-travels-and-takes-a-selfie';" target="_blank">
-                    </td>
-                    <td>
-                        <h2>Taeyeon Kim, Computer Programming, Java, JavaScript, CSS, HTML, C#, Jira, Adaptability, Fastlearner</h2>
-                    </td>
-                    
-                </tr>
-
-                <tr>
-                    <td>
-                        <p>⭐⭐⭐⭐⭐ 5.0 &nbsp;&nbsp;&nbsp;&nbsp; 
-                        <br>223 ratings | 12 answered questions</p> 
-                    </td>
-                </tr>
-                <tr>
-                    <td style="color: red; font-weight: bold;">Limeted time deal ⏰</td>                    
-                </tr>
-                <tr>
-                    <td style="color: red; font-size: 30px; font-weight: lighter;">-50%</td>                    
-                </tr>
-                <tr>
-                    <td>available: 1 ✨</td>                    
-                </tr>
-
-                <tr>
-                    <td>
-                        <button type="button" class="btn btn-danger" onclick="myFunction()">Hire me</button>
-                    </td>                    
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <h3>Details</h3>
-                        <hr>
-                        <p>
-                            Graduate with a college diploma in Computer Programming with experience in Algorithms,
-                            Networking, Database and Project building.
-                        </p>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <h3>Work Experience</h3>
-                        <hr>
-                        <p>
-                            Canada Border Services Agency <br>
-                            Ottawa, ON <br>
-                            March – July 2023 <br>
-
-                            <h4>IT Technician and Software Solutions</h4>
-                            
-                            <ul>
-                                <li>Significantly enhanced proficiency in Java and JavaScript programming languages and expertise in
-                                utilizing the Eclipse IDE. </li>
-                                <li>Successfully resolved complex bugs, elevating website functionality and enhancing user experience.</li>
-                                <li>Proficient in analyzing bug reports to pinpoint root causes and provide effective fixes.</li>
-                                <li>Proficiently managed the issue and bug resolution process, demonstrating strong organizational skills
-                                by setting work priorities and deadlines using Jira, a popular issue-tracking tool.</li>
-                                <li>Addressed compatibility issues across various web browsers. </li>
-                            </ul>
-                        </p>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td colspan="2">
-                        <h3>Certification</h3>
-                        <hr>
-                        <p>
-                            Certification AWS Certified Cloud Practitioner ( AWS CCP ) - September 2023
-                        </p>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <h3>Skills</h3>
-                        <hr>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Language: Java, C#, Python, JavaScript</li>
-                            <li>Framework: Spring framework, MyBatis, React Native, .Net</li>
-                            <li>Other: jQuery, CSS3, HTML</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <br>
-                        <ul>
-                            <li>Software: Eclipse, Oracle, Visual Studio Code, Android Studio, MySQL, VMWare Workstation</li>
-                            <li>Tool: Jira, Git, ZenHub, Figma</li>
-                        </ul>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <h3>Education</h3>
-                        <hr>
-                        <p>Business Management  (Bachelor’s degree) | National Institute for Lifelong Education(NILE) (Korea) (Degree Expected: August, 2024)
-                        </p>
-                        <p>Computer Programming (College dipmloma) | Algonquin College (Ottawa, Canada)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (College Diploma Earned: December, 2022) </p>
-                    </td>
-                </tr>
-
-            </table>
-        
+        <table>
             <tr>
+                <td rowspan="6">
+                    <img src="../resources/bubble-gum-woman-travels-and-takes-a-selfie.png" alt="selfie" onclick="javascript:location.href='//icons8.com/illustrations/illustration/bubble-gum-woman-travels-and-takes-a-selfie';" target="_blank">
+                </td>
                 <td>
-                    <p></p>
-                    <br><br>
-                    
-                    <div class="topC"  onclick="window.scrollTo(0,0);">TOP</div>
+                    <h2>Taeyeon Kim, Computer Programming, Java, JavaScript, CSS, HTML, C#, Jira, Adaptability, Fastlearner</h2>
                 </td>
             </tr>
 
-        </div>
-  
-        <script>
-            function myFunction() {
-              alert("Thank you for giving me a chance! Have a good Day.");
-            }  
+            <tr>
+                <td>
+                    <p>⭐⭐⭐⭐⭐ 5.0 &nbsp;&nbsp;&nbsp;&nbsp;
+                        <br>223 ratings | 12 answered questions</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="color: red; font-weight: bold;">Limeted time deal ⏰</td>
+            </tr>
+            <tr>
+                <td style="color: red; font-size: 30px; font-weight: lighter;">-50%</td>
+            </tr>
+            <tr>
+                <td>available: 1 ✨</td>
+            </tr>
 
-        </script>
-  
-        
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-danger" onclick="myFunction()">Hire me</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <h3>Details</h3>
+                    <hr>
+                    <p>
+                        Graduate with a college diploma in Computer Programming with experience in Algorithms,
+                        Networking, Database and Project building.
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <h3>Work Experience</h3>
+                    <hr>
+                    <p>
+                        Canada Border Services Agency <br>
+                        Ottawa, ON <br>
+                        March – July 2023 <br>
+
+                        <h4>IT Technician and Software Solutions</h4>
+
+                        <ul>
+                            <li>Significantly enhanced proficiency in Java and JavaScript programming languages and expertise in
+                                utilizing the Eclipse IDE. </li>
+                            <li>Successfully resolved complex bugs, elevating website functionality and enhancing user experience.</li>
+                            <li>Proficient in analyzing bug reports to pinpoint root causes and provide effective fixes.</li>
+                            <li>Proficiently managed the issue and bug resolution process, demonstrating strong organizational skills
+                                by setting work priorities and deadlines using Jira, a popular issue-tracking tool.</li>
+                            <li>Addressed compatibility issues across various web browsers. </li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <h3>Certification</h3>
+                    <hr>
+                    <p>
+                        Certification AWS Certified Cloud Practitioner ( AWS CCP ) - September 2023
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <h3>Skills</h3>
+                    <hr>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <ul>
+                        <li>Language: Java, C#, Python, JavaScript</li>
+                        <li>Framework: Spring framework, MyBatis, React Native, .Net</li>
+                        <li>Other: jQuery, CSS3, HTML</li>
+                    </ul>
+                </td>
+                <td>
+                    <br>
+                    <ul>
+                        <li>Software: Eclipse, Oracle, Visual Studio Code, Android Studio, MySQL, VMWare Workstation</li>
+                        <li>Tool: Jira, Git, ZenHub, Figma</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <h3>Education</h3>
+                    <hr>
+                    <p>Business Management (Bachelor’s degree) | National Institute for Lifelong Education(NILE) (Korea) (Degree Expected: August, 2024)
+                    </p>
+                    <p>Computer Programming (College diploma) | Algonquin College (Ottawa, Canada)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (College Diploma Earned: December, 2022) </p>
+                </td>
+            </tr>
+        </table>
+
+        <div class="topC" onclick="window.scrollTo(0,0);">TOP</div>
+
+    </div>
+
 </body>
+
 </html>

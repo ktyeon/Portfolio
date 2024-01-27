@@ -1,147 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Taeyeon Kim Project Portfolio</title>
-<style>
-  /* 
-** Change this if you need to modify
-** the amount of lines displayed
-*/
-/*
-** Leave these unless you want
-** to open a whole can of worms
-*/
-/*
-** Set up the experiment
-*/
-html {
-  background-color: #5138be;
-  height: 100%;
-}
+  <title>Taeyeon Kim Project Portfolio</title>
+  <style>
+    /* Set up the experiment */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    }
 
-body {
-  color: #ffffff;
-  display: flex;
-}
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #46C2CB; /* Mint color */
+      color: #453C67; /* Dark gray color */
+    }
 
-/*
-** Apply styles to the parent element
-*/
-.Words {
-  margin: 0 auto;
-  padding: 80px 0;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  font-size: 40px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  text-transform: uppercase;
-  transform: translate3d(0, 0, 0);
-  -webkit-font-smoothing: antialiased;
-  /**-webkit-font-kerning: normal;*/
-  -webkit-text-size-adjust: 100%;
-}
+    .Words {
+      list-style-type: none;
+      padding: 0;
+      font-weight: 900;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+      overflow: hidden;
+      font-size: 40px;
+    }
 
-/*
-** Apply common styles to each line of text
-*/
-.Words-line {
-  height: 50px;
-  overflow: hidden;
-  position: relative;
-}
-.Words-line:nth-child(odd) {
-  transform: skew(60deg, -30deg) scaleY(0.66667);
-}
-.Words-line:nth-child(even) {
-  transform: skew(0deg, -30deg) scaleY(1.33333);
-}
-.Words-line:nth-child(1) {
-  left: 29px;
-}
-.Words-line:nth-child(2) {
-  left: 58px;
-}
-.Words-line:nth-child(3) {
-  left: 87px;
-}
-.Words-line:nth-child(4) {
-  left: 116px;
-}
-.Words-line:nth-child(5) {
-  left: 145px;
-}
-.Words-line:nth-child(6) {
-  left: 174px;
-}
-.Words-line:nth-child(7) {
-  left: 203px;
-}
+    .Words-line {
+      height: 70px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      transition: all 0.4s ease-in-out;
+    }
 
-/*
-** Fine-grained text styles
-*/
-p {
-  height: 50px;
-  line-height: 45px;
-  padding: 0 10px;
-  transition: all 0.4s ease-in-out;
-  transform: translate3d(0, 0, 0);
-  vertical-align: top;
-  white-space: nowrap;
-}
+    p {
+      height: 70px;
+      line-height: 65px;
+      padding: 0 10px;
+      vertical-align: top;
+      white-space: nowrap;
+      z-index: 1; /* Ensure the text is above the background */
+    }
 
-/*
-** The hover interaction
-*/
-.Words:hover p {
-  transform: translate3d(0, -50px, 0);
-}
+    .highlight {
+      background-color: #F2F7A1; /* Light yellowish color */
+      color: #453C67; /* Dark gray color */
+    }
 
-</style>
+    .Words-line:nth-child(odd) {
+      transform: skew(60deg, -30deg) scaleY(0.66667);
+    }
+
+    .Words-line:nth-child(even) {
+      transform: skew(0deg, -30deg) scaleY(1.33333);
+    }
+
+    .Words:hover .Words-line {
+      color: #46C2CB; /* Mint color on hover */
+    }
+
+    .Words:hover .Words-line:nth-child(3) {
+      height: 70px;
+      opacity: 1;
+    }
+
+    /* Additional Styles */
+    i.fa-regular.fa-computer-mouse {
+      font-size: 30px;
+      margin-left: 10px;
+      transition: all 0.3s ease-in-out;
+      align-items: flex;
+    }
+
+    a.enter-link {
+      text-decoration: none;
+      color: #453C67; /* Dark gray color */
+      font-weight: bold;
+      font-size: 20px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      border: 2px solid #453C67; /* Dark gray color border */
+      width: 100px;
+      height: 30px;
+    }
+
+    .Words:hover a.enter-link {
+      background-color: #453C67; /* Dark gray color on hover */
+      color: #46C2CB; /* Mint color on hover */
+    }
+
+    /* Styling for "Portfolio Taeyeon Kim" */
+    .portfolio-text {
+      background-color: #F2F7A1; /* Light yellowish color */
+      color: #453C67; /* Dark gray color */
+      padding: 0 10px;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+      .Words {
+        font-size: 24px;
+      }
+
+      .Words-line {
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      p {
+        line-height: normal;
+      }
+
+      a.enter-link {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  
   <ul class="Words" id="Words">
     <li class="Words-line">
       <p>&nbsp;</p>
       <p>Project</p>
     </li>
     <li class="Words-line">
+      <p class="highlight">Portfolio</p>
+      <p>Website</p>
+    </li>
+    <li class="Words-line">
+      <p>by</p>
+      <p class="highlight">Taeyeon</p>
+      <p class="highlight">Kim</p>
+    </li>
+    <li class="Words-line">
       <p>Project</p>
-      <p>Portflio</p>
-    </li>
-    <li class="Words-line">
-      <p>Portflio</p>
-      <p>Website</p>
+      <p>Portfolio</p>
     </li>
     <li class="Words-line">
       <p>Website</p>
       <p>by</p>
+      <p>Taeyeon</p>
     </li>
     <li class="Words-line">
+      <p>Project</p>
+      <p>Portfolio</p>
+    </li>
+    <li class="Words-line">
+      <p>Website</p>
       <p>by</p>
       <p>Taeyeon</p>
     </li>
     <li class="Words-line">
-      <p>Taeyeon</p>
-      <p>Kim</p>
+      <p>Project</p>
+      <p>Portfolio</p>
     </li>
     <li class="Words-line">
-      <p>Kim</p>
-      <p>&nbsp;</p>
+      <p>Website</p>
+      <p>by</p>
+      <p>Taeyeon</p>
     </li>
-
-    <i class="fa-regular fa-computer-mouse"></i>
-    <a href="./main/gift.html">Enter</a>
+    <br><br>
+    <li>
+      <i class="fa-regular fa-computer-mouse"></i>
+      <a class="enter-link" href="./main/card.html">More→</a>
+    </li>
   </ul>
-
-
-
-
 </body>
 
-
 </html>
-
-

@@ -1,63 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.querySelector('.navbar__toggle');
+            const menu = document.querySelector('.navbar__menu');
+
+            toggleButton.addEventListener('click', function () {
+                menu.classList.toggle('show');
+            });
+        });
+    </script>
     <link rel="stylesheet" href="header.css">
+    <style>
+        :root {
+            --text-color: #f0f4f5;
+            --background-color: #46C2CB;
+            --accent-color: #f0f4f5;
+        }
+
+        /* menubar */
+        body {
+            margin: 0;
+            font-family: 'Source sans pro';
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--background-color);
+            padding: 8px 12px;
+        }
+
+        .navbar__logo {
+            font-size: 24px;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar__logo i {
+            color: white;
+            margin-right: 5px;
+        }
+
+        .navbar__menu {
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .navbar__menu li {
+            padding: 8px 12px;
+        }
+
+        .navbar__menu li:hover {
+            background-color: lightblue;
+            border-radius: 4px;
+        }
+
+        .navbar__icons {
+            list-style: none;
+            color: white;
+            display: flex;
+            padding-left: 0;
+        }
+
+        .navbar__icons li {
+            padding: 8px 12px;
+        }
+
+        .navbar__toggle {
+            display: none;
+            position: absolute;
+            right: 32px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                position: relative;
+                z-index: 1;
+            }
+
+            .navbar__menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: var(--background-color);
+                padding: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 0;
+            }
+
+            .navbar__menu.show {
+                display: flex;
+            }
+
+            .navbar__toggle {
+                display: block;
+                padding: 8px;
+                cursor: pointer;
+                z-index: 2;
+            }
+
+            .fa-bars {
+                color: white;
+            }
+
+            .navbar__logo {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media screen and (min-width: 601px) {
+            .navbar__menu {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                width: auto;
+                box-shadow: none;
+            }
+
+            .navbar__toggle {
+                display: none;
+            }
+        }
+    </style>
     <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
-    
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
-    
-    
-
-<script src="header.js" defer></script>
-    
+    <script src="header.js" defer></script>
     <title>Main</title>
-
 </head>
 
 <body>
-    
-    <!-- logo  -->
+    <!-- logo -->
     <nav class="navbar" id="header">
-
         <div class="navbar__logo">
-
             <i class="fa-solid fa-battery-full"></i>
             <a href="../index.html">Taeyeon Portfolio</a>
-
         </div>
 
-        <!-- menubar -->
-        <ul class="navbar__menu">
+        <!-- hamburger menu -->
+        <a href="#" class="navbar__toggle">
+            <i class="fa-solid fa-bars"></i>
+        </a>
 
-            <li><a href="gift.html">Card</a></li>
+        <!-- menu -->
+        <ul class="navbar__menu">
+            <li><a href="card.html">Card</a></li>
             <li><a href="profile.html">Profile</a></li>
             <li><a href="cSharpProject.html">C# Project</a></li>
             <li><a href="webSocket.html">WebSocket Project</a></li>
             <li><a href="reactProject.html">React.js Project</a></li>
             <li><a href="project.html">Project</a></li>
-            <li><a href="main.html">Reaction Speed Test</a></li>
+            <li><a href="speedGame.html">Reaction Speed Test</a></li>
             <li><a href="contact.html">Contact</a></li>
-            
         </ul>
 
-        <!--github, linkedin-->
+        <!-- github, linkedin -->
         <ul class="navbar__icons">
-            
             <li><a href="https://www.linkedin.com/in/7-taeyeon-kim/"><i class="fa-brands fa-linkedin"></i></a></li>
             <li><a href="https://github.com/ktyeon"><i class="fa-brands fa-square-github"></i></a></li>
-
         </ul>
-
-      
-    
     </nav>
-
-    
 </body>
+
 </html>

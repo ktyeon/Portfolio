@@ -1,36 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="project.css">
+    <style>
+        /* Common Styles */
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Mobile Styles */
+        @media screen and (max-width: 600px) {
+            h1 {
+                text-align: center;
+                margin-top: 10px;
+                font-size: 24px; /* Reduce text size for mobile */
+            }
+
+            .projectTb {
+                width: 90%;
+                max-width: 100%; /* Expand table to maximum width on mobile */
+                margin-top: 20px; /* Adjust top margin on mobile */
+            }
+
+            .topC {
+                margin-bottom: 10px; /* Adjust bottom margin on mobile */
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px; /* Adjust bottom margin for images on mobile */
+            }
+        }
+    </style>
     <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
-    
-    <!-- font -->
+
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
-    
-   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap"
+        rel="stylesheet">
+
+
     <title>Project</title>
 </head>
+
 <body>
 
-
     <div id="header">
-       
+
     </div>
 
     <script>
-         async function fetchHtmlAsText(url) {
+        async function fetchHtmlAsText(url) {
             return await (await fetch(url)).text();
         }
-        
+
         async function importPage(target) {
             document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
         }
@@ -39,7 +74,6 @@
     </script>
 
     <h1>Applied and Professional Experience</h1>
-
 
     <table class="projectTb">
         <tr>
@@ -98,7 +132,7 @@
                     <br>
                     Count the number of matching id values and if greater than 0, fail = "NNNNNNN" , or same with 0 success = "NNNNNY" 
                 </p>
-
+    
             </td>
         </tr>
         <tr>
@@ -116,7 +150,7 @@
                     <li>When a user logs in or performs an action, JSON is used for transmitting data from the client to the
                     server and receiving a response from the server.</li>
                     <li>Used MyBatis connected with Oracle to build a search function and request a page list.</li>
-
+    
                     <li style="font-style: italic;">Git: <a href="https://github.com/Taeyeon-dev/BookForYou.git" style="color: black;">https://github.com/Taeyeon-dev/BookForYou.git</a></li>
                 </ul>
                 <br>
@@ -136,9 +170,15 @@
             </td>
         </tr>
     </table>
-    
-
-
 
 </body>
+
 </html>
+
+
+
+
+
+
+
+
