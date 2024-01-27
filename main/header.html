@@ -5,17 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.querySelector('.navbar__toggle');
-            const menu = document.querySelector('.navbar__menu');
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
 
-            toggleButton.addEventListener('click', function () {
-                menu.classList.toggle('show');
-            });
-        });
-    </script>
-    <link rel="stylesheet" href="header.css">
     <style>
         :root {
             --text-color: #f0f4f5;
@@ -142,13 +133,49 @@
                 display: none;
             }
         }
+
     </style>
     <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
     <script src="header.js" defer></script>
+    
+    <script>
+        async function fetchHtmlAsText(url) {
+            return await (await fetch(url)).text();
+        }
+    
+        async function importPage(target) {
+            const headerContent = await fetchHtmlAsText(target + '.html');
+            document.querySelector('#main').innerHTML = headerContent;
+    
+            // Attach event listener after loading the content
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            if (hamburgerIcon) {
+                hamburgerIcon.addEventListener('click', function () {
+                    // Call the importPage function with the target as 'header'
+                    importPage('header');
+                });
+            }
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            // Attach initial event listener
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            if (hamburgerIcon) {
+                hamburgerIcon.addEventListener('click', function () {
+                    // Call the importPage function with the target as 'header'
+                    importPage('header');
+                });
+            }
+        });
+    </script>
+
     <title>Main</title>
 </head>
 
 <body>
+
+
+    
     <!-- logo -->
     <nav class="navbar" id="header">
         <div class="navbar__logo">

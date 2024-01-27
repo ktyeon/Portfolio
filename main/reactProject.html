@@ -95,6 +95,28 @@
         importPage("header");
     </script>
 
+    <script>
+        async function fetchHtmlAsText(url) {
+            return await (await fetch(url)).text();
+        }
+
+        async function importPage(target) {
+            const headerContent = await fetchHtmlAsText(target + '.html');
+            document.querySelector('#main').innerHTML = headerContent;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add an event listener to the hamburger icon
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            if (hamburgerIcon) {
+                hamburgerIcon.addEventListener('click', function () {
+                    // Call the importPage function with the target as 'header'
+                    importPage('header');
+                });
+            }
+        });
+    </script>
+
 </head>
 <body>
 

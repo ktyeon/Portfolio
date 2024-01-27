@@ -6,19 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
     
-    <!-- font -->
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="...">
+    <script src="header.js" defer></script>
+    <script src="header.html" defer></script>
+
+
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function () {
+            const headerContainer = document.getElementById('header');
+            const iframe = document.createElement('iframe');
+            iframe.src = 'header.html';
+            iframe.style.width = '100%';
+            iframe.style.border = 'none';
     
+            // Adjust the height based on your content
+            iframe.style.height = '100px'; // You may need to set an appropriate height
+    
+            headerContainer.appendChild(iframe);
+        });
+    </script>
+
     <title>WebSocket Chat Service</title>
     <style>
-
-        #webSocket{
+        #webSocket {
             display: block; 
             margin: 0px auto; 
             width: 600px;
@@ -26,12 +41,12 @@
             margin-bottom: 40px;
         }
 
-        h3{
+        h3 {
             text-decoration: underline;
         }
 
-        .topC{
-            cursor:pointer; 
+        .topC {
+            cursor: pointer; 
             border: 1px; 
             background-color: #46C2CB; 
             color: aliceblue; 
@@ -42,6 +57,20 @@
             text-align: center;
             display: block; 
             margin: 0px auto; 
+        }
+
+        /* Initially hide the menu with display: none; */
+        .navbar__menu {
+            display: none; /* Hide the menu by default */
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        /* Show the menu when the 'show' class is added */
+        .navbar__menu.show {
+            display: block;
+            max-height: 1000px; /* Adjust the value as needed */
         }
 
         /* Responsive styles for smaller screens */
@@ -67,115 +96,141 @@
                 height: auto;
                 margin-bottom: 10px; /* Adjust bottom margin for images on mobile */
             }
+            .navbar__toggle,
+            .navbar__menu {
+            display: none; /* Hide the hamburger icon and menu */
+            }
+
 
         }
+
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                position: relative;
+                z-index: 1;
+            }
+
+            .navbar__menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: var(--background-color);
+                padding: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 0;
+            }
+
+            .navbar__menu.show {
+                display: flex;
+            }
+
+            .navbar__toggle {
+                display: block;
+                padding: 8px;
+                cursor: pointer;
+                z-index: 2;
+            }
+
+            .fa-bars {
+                color: white;
+            }
+
+            .navbar__logo {
+                margin-bottom: 10px;
+            }
+        }
+        
     </style>
 
-<div id="header">
-
-
-</div>
-
-<script>
-    async function fetchHtmlAsText(url) {
-       return await (await fetch(url)).text();
-   }
-   
-   async function importPage(target) {
-       document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
-   }
-
-   importPage("header");
-</script>
-
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
+    <script src="header.js" defer></script>
 </head>
 <body>
-
-    <div id="webSocket">
+    <div id="header"></div>
+    <div id="container"></div>
+    <a href="#" class="navbar__toggle">
+        <i class="fa-solid fa-bars"></i>
+    </a>
     
-        <h1>WebSocket Chat Service project</h1>
+    
+    <h1>WebSocket Chat Service project</h1>
+    
+    <img src="../resources/websocket.gif" alt="webSocket project" style="width: 700px;">
+
+    <br><br><br><br><br>
+    <h3>What it is</h3>
+    <p>  
+        In developing the WebSocket-based chat service, I've gained expertise in architecting real-time communication systems. 
+        Leveraging Socket.IO, I managed user connections, implemented authentication, and established a robust messaging system, 
+        allowing bidirectional communication between clients and the server. 
+        The incorporation of system-generated messages enhanced the user experience. 
+        Proficiency in event-driven programming, error handling, and scalability considerations further showcases my ability to create dynamic and reliable applications. 
+    </p>
+
+    <a href="https://github.com/ktyeon/WebSocketChat" style="color: black;">▶Visit the github</a>
+
+    <br><br>
+    <h3>What I did</h3>
+    <p>
+        <h4>Real-Time Communication Architecture</h4>
+        Proficiency in designing and implementing a real-time communication architecture using WebSocket and Socket.IO.
+        Understanding the mechanisms for bidirectional communication between clients and the server.
         
-        <img src="../resources/websocket.gif" alt="webSocket project" style="width: 700px;">
-
-        <br><br><br><br><br>
-        <h3>What it is</h3>
-        <p>  
-            
-            In developing the WebSocket-based chat service, I've gained expertise in architecting real-time communication systems. 
-            Leveraging Socket.IO, I managed user connections, implemented authentication, and established a robust messaging system, 
-            allowing bidirectional communication between clients and the server. 
-            The incorporation of system-generated messages enhanced the user experience. 
-            Proficiency in event-driven programming, error handling, and scalability considerations further showcases my ability to create dynamic and reliable applications. 
-    
-        </p>
-
-        <a href="https://github.com/ktyeon/WebSocketChat" style="color: black;">▶Visit the github</a>
-
-        <br><br>
-
-        <h3>What I did</h3>
-        <p>
-            
-            <h4>Real-Time Communication Architecture</h4>
-            Proficiency in designing and implementing a real-time communication architecture using WebSocket and Socket.IO.
-            Understanding the mechanisms for bidirectional communication between clients and the server.
-            
-            <h4>Server-Side WebSocket Handling</h4>
-            Experience in handling WebSocket connections on the server side using Node.js.
-            Competence in managing events such as connection, disconnection, and custom events like sign-in and message transmission.
-            
-            <h4>User Authentication and Management</h4>
-            Implementation of user authentication mechanisms, including user sign-in and disconnection handling.
-            Knowledge of managing user-related data, such as user names and socket IDs.
-            
-            <h4>Real-Time Message Handling</h4>
-            Ability to process and broadcast real-time messages to all connected clients.
-            Understanding of handling message data, including user details, content, and timestamps.
-            
-            <h4> System Messages and Notifications</h4>
-            Implementation of system-generated messages to provide informative notifications, such as user join and leave announcements.
-           
-            <h4>Error Handling and Logging</h4>
-            Proficiency in incorporating error-handling mechanisms to manage exceptional scenarios during various events.
-            Skill in logging errors for diagnostic purposes, contributing to system reliability.
-            
-            <h4>Event-Driven Programming</h4>
-            Experience in event-driven programming paradigms, where actions and responses are triggered by events.
-            Competence in handling asynchronous operations and non-blocking I/O operations.
-           
-            <h4>Scalability Considerations</h4>
-            Understanding of considerations for scaling the chat service to handle a growing number of users.
-            Proficiency in designing an architecture that supports low-latency communication and responsiveness.
-           
-            <h4>User Experience Enhancement</h4>
-            Implementation of features that enhance the overall user experience, such as welcoming messages, farewell messages, and system-generated notifications.
+        <h4>Server-Side WebSocket Handling</h4>
+        Experience in handling WebSocket connections on the server side using Node.js.
+        Competence in managing events such as connection, disconnection, and custom events like sign-in and message transmission.
+        
+        <h4>User Authentication and Management</h4>
+        Implementation of user authentication mechanisms, including user sign-in and disconnection handling.
+        Knowledge of managing user-related data, such as user names and socket IDs.
+        
+        <h4>Real-Time Message Handling</h4>
+        Ability to process and broadcast real-time messages to all connected clients.
+        Understanding of handling message data, including user details, content, and timestamps.
+        
+        <h4> System Messages and Notifications</h4>
+        Implementation of system-generated messages to provide informative notifications, such as user join and leave announcements.
        
-        </p>
-
-        <img src="../resources/Socket.id.png" alt="react page" style="width: 700px;">
-        <br>
-        <p>
-
-
-        </p>
+        <h4>Error Handling and Logging</h4>
+        Proficiency in incorporating error-handling mechanisms to manage exceptional scenarios during various events.
+        Skill in logging errors for diagnostic purposes, contributing to system reliability.
         
-        <img src="../resources/signin.png" alt="react page" style="width: 700px;">
+        <h4>Event-Driven Programming</h4>
+        Experience in event-driven programming paradigms, where actions and responses are triggered by events.
+        Competence in handling asynchronous operations and non-blocking I/O operations.
+       
+        <h4>Scalability Considerations</h4>
+        Understanding of considerations for scaling the chat service to handle a growing number of users.
+        Proficiency in designing an architecture that supports low-latency communication and responsiveness.
+       
+        <h4>User Experience Enhancement</h4>
+        Implementation of features that enhance the overall user experience, such as welcoming messages, farewell messages, and system-generated notifications.
+    </p>
 
-        <br><br><br><br>
+    <img src="../resources/Socket.id.png" alt="react page" style="width: 700px;">
+    <br>
+    <p></p>
+    
+    <img src="../resources/signin.png" alt="react page" style="width: 700px;">
 
-        <h3>Database MongoDB</h3>
+    <br><br><br><br>
+    <h3>Database MongoDB</h3>
 
-        <h4>Database Integration:</h4>
-        Integration of MongoDB or a similar database for storing and retrieving chat messages and user information.
-        Skill in utilizing a database controller (e.g., userController and chatController) for data persistence.
-        
-        <br><br><br>
+    <h4>Database Integration:</h4>
+    Integration of MongoDB or a similar database for storing and retrieving chat messages and user information.
+    Skill in utilizing a database controller (e.g., userController and chatController) for data persistence.
+    
+    <br><br><br>
+    <img src="../resources/mongodb.png" alt="react page" style="width: 700px;">
 
-        <img src="../resources/mongodb.png" alt="react page" style="width: 700px;">
+    <br><br><br><br><br>
+    <div class="topC"  onclick="window.scrollTo(0,0);">TOP</div>
 
-        <br><br><br><br><br>
-               
-        <div class="topC"  onclick="window.scrollTo(0,0);">TOP</div>
-            
+    
 </body>
 </html>
