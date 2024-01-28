@@ -44,6 +44,24 @@
         });
     </script>
 
+    <script>
+        function showReviews() {
+            // Create a pop-up or display reviews in a designated area
+            alert("⭐⭐⭐⭐⭐ 5.0\n\nReview 1: Excellent work, highly recommended!\nReview 2: Taeyeon is a fast learner and great to work with. \nReview 3: Taeyeon consistently infuses the team atmosphere with her radiant energy. \nReview 4: Taeyeon is a developer with an exceptionally strong sense of responsibility. \nReview 5: Valuing collaboration highly, Taeyeon consistently fosters smooth communication among team members.");
+        }
+
+        function showQandA() {
+            // Create a pop-up or display Q&A in a designated area
+            alert("Q: When can you start working?\nA: I can start right away.\n\nQ: What's your personality like?\nA: I'm friendly and easy-going.\n\nQ: What are your hobbies?\nA: I enjoy creating character illustrations.\n\nQ: Do you like puppies?\nA: YES!! I have a puppy brother.\n\nQ: Can you ride a skateboard?\nA: Yes, I can! I like it.");
+        }
+
+        function hireMe() {
+            // Create a pop-up or display a message when "Hire me" is clicked
+            alert("Thank you for giving me a chance! Have a nice day!");
+        }
+    </script>
+
+
     <script src="header.js" defer></script>
 
     <title>Profile</title>
@@ -100,6 +118,12 @@
             margin-bottom: 20px;
         }
 
+        .customCursor,
+        .hireButton {
+        cursor: pointer; /* Set the default cursor style */
+        }
+        
+
         /* Media queries for smaller screens */
         @media screen and (max-width: 768px) {
             .tableDetail {
@@ -154,10 +178,17 @@
             </tr>
 
             <tr>
-                <td>
-                    <p>⭐⭐⭐⭐⭐ 5.0 &nbsp;&nbsp;&nbsp;&nbsp;
-                        <br>223 ratings | 12 answered questions</p>
+                
+                    
+                <td class="customCursor">
+                    <p onclick="showReviews()">⭐⭐⭐⭐⭐ 5.0 &nbsp;&nbsp;&nbsp;&nbsp;<br>223 ratings </p>
+                    <p onclick="showQandA()">12 answered questions</p>
                 </td>
+
+                        
+                        
+                    
+                
             </tr>
             <tr>
                 <td style="color: red; font-weight: bold;">Limeted time deal ⏰</td>
@@ -170,8 +201,8 @@
             </tr>
 
             <tr>
-                <td>
-                    <button type="button" class="btn btn-danger" onclick="myFunction()">Hire me</button>
+                <td class="hireButton">
+                    <button type="button" class="btn btn-danger" onclick="hireMe()">Hire me</button>
                 </td>
             </tr>
 
