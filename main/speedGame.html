@@ -39,6 +39,35 @@
     });
     </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            async function fetchHtmlAsText(url) {
+                return await (await fetch(url)).text();
+            }
+    
+            async function importHeader() {
+                document.querySelector('#header').innerHTML = await fetchHtmlAsText('header.html');
+                // Now that the header is imported, you can safely add the event listener.
+                addToggleListener();
+            }
+    
+            importHeader();
+            
+            function addToggleListener() {
+                const toggleBtn = document.querySelector('.navbar__toggleBtn');
+                const menu = document.querySelector('.navbar__menu');
+    
+                toggleBtn.addEventListener('click', function () {
+                    menu.classList.toggle('active');
+                    icons.classList.toggle('active');
+
+                });
+            }
+        });
+    </script>
+
+    <script src="header.js" defer></script>
+
     <style>
         /* Your styles go here */
 
@@ -111,7 +140,7 @@
         }
 
 
-        @media only screen and (max-width: 600px) {
+        @media screen and (max-width: 768px) {
         #screen {
             margin-top: 20px;
             height: 100px;
@@ -148,17 +177,6 @@
     <div id="header">
     </div>
 
-    <script>
-        async function fetchHtmlAsText(url) {
-            return await (await fetch(url)).text();
-        }
-
-        async function importPage(target) {
-            document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
-        }
-
-        importPage("header");
-    </script>
     
     <div class="clickGame">
         <h1>Reaction Speed Test</h1>

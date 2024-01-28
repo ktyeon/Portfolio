@@ -30,6 +30,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
 
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            async function fetchHtmlAsText(url) {
+                return await (await fetch(url)).text();
+            }
+    
+            async function importHeader() {
+                document.querySelector('#header').innerHTML = await fetchHtmlAsText('header.html');
+                // Now that the header is imported, you can safely add the event listener.
+                addToggleListener();
+            }
+    
+            importHeader();
+            
+            function addToggleListener() {
+                const toggleBtn = document.querySelector('.navbar__toggleBtn');
+                const menu = document.querySelector('.navbar__menu');
+    
+                toggleBtn.addEventListener('click', function () {
+                    menu.classList.toggle('active');
+                    icons.classList.toggle('active');
+
+                });
+            }
+        });
+    </script>
+
+    <script src="header.js" defer></script>
+
+    <script>
+        function letteropen() {
+            document.getElementsByClassName("letterclose")[0].style.display = 'none'
+            document.getElementsByClassName("letteropen")[0].style.display = 'block'
+        }
+    </script>
+
+
     <style>
         body {
             background-color: #9b070f;
@@ -104,31 +141,13 @@
         }
     </style>
 
-    <script>
-        function letteropen() {
-            document.getElementsByClassName("letterclose")[0].style.display = 'none'
-            document.getElementsByClassName("letteropen")[0].style.display = 'block'
-        }
-    </script>
+
 </head>
 
 <body>
 
-    <div id="header">
-       
-    </div>
+    <div id="header"></div>
 
-    <script>
-         async function fetchHtmlAsText(url) {
-            return await (await fetch(url)).text();
-        }
-        
-        async function importPage(target) {
-            document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
-        }
-
-        importPage("header");
-    </script>
 
     <div class="letterclose">
         <div class="envelope" onclick="letteropen()"></div>

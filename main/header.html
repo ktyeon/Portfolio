@@ -6,16 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.querySelector('.navbar__toggle');
-            const menu = document.querySelector('.navbar__menu');
-
-            toggleButton.addEventListener('click', function () {
-                menu.classList.toggle('show');
-            });
-        });
-    </script>
+    <script src="header.js" defer></script>
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
 
     <style>
         :root {
@@ -32,7 +24,7 @@
 
         a {
             text-decoration: none;
-            color: var(--text-color);
+            color: white;
         }
 
         .navbar {
@@ -44,8 +36,8 @@
         }
 
         .navbar__logo {
-            font-size: 24px;
-            color: var(--text-color);
+            font-size: 20px;
+            color: white;
             display: flex;
             align-items: center;
         }
@@ -74,78 +66,71 @@
             list-style: none;
             color: white;
             display: flex;
-            padding-left: 0;
         }
 
         .navbar__icons li {
             padding: 8px 12px;
         }
 
-        .navbar__toggle {
+        .navbar__toggleBtn{
             display: none;
             position: absolute;
             right: 32px;
             font-size: 24px;
             cursor: pointer;
+            color: whtie;
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 768px) {
+           
             .navbar {
                 flex-direction: column;
                 align-items: flex-start;
-                position: relative;
-                z-index: 1;
+                padding: 8px 24px;
+               
             }
+
+            .navbar__toggleBtn {
+                display: block;
+                position: absolute; /* Change to relative positioning */
+                margin-top: 8px; /* Add some top margin for spacing */
+            }
+
 
             .navbar__menu {
                 display: none;
                 flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
+                align-items: center;
                 width: 100%;
-                background-color: var(--background-color);
-                padding: 10px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                z-index: 0;
+                margin-top: 10px; /* Add margin at the top */
             }
 
-            .navbar__menu.show {
-                display: flex;
+            .navbar__menu li {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0; /* Adjust vertical padding as needed */
             }
 
-            .navbar__toggle {
-                display: block;
-                padding: 8px;
-                cursor: pointer;
-                z-index: 2;
-            }
-
-            .fa-bars {
-                color: white;
-            }
-
-            .navbar__logo {
-                margin-bottom: 10px;
-            }
-        }
-
-        @media screen and (min-width: 601px) {
-            .navbar__menu {
-                display: flex;
-                flex-direction: row;
-                position: static;
-                width: auto;
-                box-shadow: none;
-            }
-
-            .navbar__toggle {
+            .navbar__icons {
                 display: none;
+                justify-content: center;
+                width: 100%;
             }
+
+            .navbar__toggleBtn{
+                display: block;
+            }
+
+            .navbar__menu.active,
+            .navbar__icons.active{
+                display: flex;
+            }
+           
         }
+
+       
     </style>
-    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
-    <script src="header.js" defer></script>
+
     <title>Main</title>
 </head>
 
@@ -158,12 +143,14 @@
         </div>
 
         <!-- hamburger menu -->
-        <a href="#" class="navbar__toggle">
+        
+        <a href="#" class="navbar__toggleBtn">
             <i class="fa-solid fa-bars"></i>
         </a>
+  
 
         <!-- menu -->
-        <ul class="navbar__menu">
+        <div class="navbar__menu">
             <li><a href="card.html">Card</a></li>
             <li><a href="profile.html">Profile</a></li>
             <li><a href="cSharpProject.html">C# Project</a></li>
@@ -172,13 +159,13 @@
             <li><a href="project.html">Project</a></li>
             <li><a href="speedGame.html">Reaction Speed Test</a></li>
             <li><a href="contact.html">Contact</a></li>
-        </ul>
+        </div>
 
         <!-- github, linkedin -->
-        <ul class="navbar__icons">
+        <div class="navbar__icons">
             <li><a href="https://www.linkedin.com/in/7-taeyeon-kim/"><i class="fa-brands fa-linkedin"></i></a></li>
             <li><a href="https://github.com/ktyeon"><i class="fa-brands fa-square-github"></i></a></li>
-        </ul>
+        </div>
     </nav>
 </body>
 

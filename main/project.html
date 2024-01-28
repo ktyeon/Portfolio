@@ -11,60 +11,60 @@
         /* Common Styles */
         h1{
     text-align: center;
-}
-
-.projectTb{
-    display: block; 
-    margin: 0px auto; 
-    width: 600px;
-    margin-top: 30px;
-    margin-bottom: 40px;
-}
-
-.topC{
-    cursor:pointer; 
-    border: 1px; 
-    background-color: #46C2CB; 
-    color: aliceblue; 
-    width: 60px; 
-    height: 20px; 
-    align-items: flex-end;
-    border-radius: 5px;
-    text-align: center;
-    display: block; 
-    margin: 0px auto; 
-}
-
-img{
-    width: 600px;
-    height: 300px;
-}
-
-        /* Mobile Styles */
-        @media screen and (max-width: 600px) {
-            h1 {
-                text-align: center;
-                margin-top: 10px;
-                font-size: 24px; /* Reduce text size for mobile */
-            }
-
-            .projectTb {
-                width: 90%;
-                max-width: 100%; /* Expand table to maximum width on mobile */
-                margin-top: 20px; /* Adjust top margin on mobile */
-            }
-
-            .topC {
-                margin-bottom: 10px; /* Adjust bottom margin on mobile */
-            }
-
-            img {
-                width: 100%;
-                height: auto;
-                margin-bottom: 10px; /* Adjust bottom margin for images on mobile */
-            }
         }
-    </style>
+
+        .projectTb{
+            display: block; 
+            margin: 0px auto; 
+            width: 600px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        .topC{
+            cursor:pointer; 
+            border: 1px; 
+            background-color: #46C2CB; 
+            color: aliceblue; 
+            width: 60px; 
+            height: 20px; 
+            align-items: flex-end;
+            border-radius: 5px;
+            text-align: center;
+            display: block; 
+            margin: 0px auto; 
+        }
+
+        img{
+            width: 600px;
+            height: 300px;
+        }
+
+                /* Mobile Styles */
+                @media screen and (max-width: 600px) {
+                    h1 {
+                        text-align: center;
+                        margin-top: 10px;
+                        font-size: 24px; /* Reduce text size for mobile */
+                    }
+
+                    .projectTb {
+                        width: 90%;
+                        max-width: 100%; /* Expand table to maximum width on mobile */
+                        margin-top: 20px; /* Adjust top margin on mobile */
+                    }
+
+                    .topC {
+                        margin-bottom: 10px; /* Adjust bottom margin on mobile */
+                    }
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        margin-bottom: 10px; /* Adjust bottom margin for images on mobile */
+                    }
+                }
+            </style>
     <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
 
     <!-- Font -->
@@ -77,6 +77,34 @@ img{
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap"
         rel="stylesheet">
 
+        <script>
+            document.addEventListener('DOMContentLoaded', async function() {
+                async function fetchHtmlAsText(url) {
+                    return await (await fetch(url)).text();
+                }
+        
+                async function importHeader() {
+                    document.querySelector('#header').innerHTML = await fetchHtmlAsText('header.html');
+                    // Now that the header is imported, you can safely add the event listener.
+                    addToggleListener();
+                }
+        
+                importHeader();
+                
+                function addToggleListener() {
+                    const toggleBtn = document.querySelector('.navbar__toggleBtn');
+                    const menu = document.querySelector('.navbar__menu');
+        
+                    toggleBtn.addEventListener('click', function () {
+                        menu.classList.toggle('active');
+                        icons.classList.toggle('active');
+    
+                    });
+                }
+            });
+        </script>
+    
+        <script src="header.js" defer></script>
 
     <title>Project</title>
 </head>
@@ -86,18 +114,6 @@ img{
     <div id="header">
 
     </div>
-
-    <script>
-        async function fetchHtmlAsText(url) {
-            return await (await fetch(url)).text();
-        }
-
-        async function importPage(target) {
-            document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
-        }
-
-        importPage("header");
-    </script>
 
     <h1>Applied and Professional Experience</h1>
 
