@@ -45,20 +45,115 @@
     
 
     <script src="header.js" defer></script>
+
+    <style>
+        .explain{
+        display: block; 
+        margin: 0px auto; 
+        width: 600px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+        h3{
+            text-decoration: underline;
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div id="header"></div>
 
+
     <div class="wrapper">
-        <div class="game-text">
+        <br><br>
+        <h1>JavaScript TETRIS Game</h1>
+
+        <div class="game-text" style="display: none;">
             Game Over
             <button>Restart</button>
         </div>
+
         <div class="score">0</div>
+        
         <div class="playground">
+        
             <ul></ul>
+        
+        </div>
+
+        <div class="explain">
+            <h3>What it is</h3>
+
+            <p>In this project, I have designed and implemented a classic Tetris game using a combination of HTML, CSS, and JavaScript. Tetris, a timeless and engaging puzzle game, served as the inspiration for this project. The goal was to create a fully functional and interactive game that captures the essence of the original while adding a personal touch.</p>
+        
+            <br><br>
+
+            <p>
+                <h3>How to control Key</h3> 
+                <b>  ←  →  </b> <br> Change the block's position <br> <br>
+                <b> ↑ </b> <br> Change the block's shape <br><br>
+                <b>Sifht </b> <br> Drop the block quickly <br><br>
+            </p>
+
+            <br><br>
+            <p>
+
+                <h3>What I did</h3>
+
+                   <h4>Technologies Used</h4> 
+        
+                    HTML for structuring the game layout.
+                    CSS for styling elements and creating an aesthetically pleasing interface.
+                    JavaScript for the game logic, user interaction, and real-time updates.
+                    
+        
+                    <br><br>
+                    <h4>Block Movement and Rotation</h4> 
+        
+                    Implemented responsive controls allowing users to move and rotate falling blocks using arrow keys.
+                    <br><br>
+                    <h4>Line Clearance and Scoring</h4> 
+                    Designed a line clearance mechanism to remove completed lines and increase the player's score.
+                    <br><br>
+                    <h4>Dynamic Speed Increase</h4> 
+        
+                    Introduced a dynamic speed increase, with the descent speed of blocks accelerating every 10 points, creating a progressively challenging gameplay experience.
+                   <br><br>
+                    <h4>User Interaction</h4> 
+        
+                    Utilized keyboard events to provide users with intuitive control over block movement, rotation, and actions.
+                    <br><br>
+                    <h4>Game Over Handling</h4> 
+        
+                    Implemented a Game Over screen with the option to restart the game, providing a seamless user experience.
+                    <br><br>
+                    <h4>Clean Code and Scalability</h4> 
+        
+                    The codebase is organized and well-documented, using meaningful variable and function names for clarity. This project is structured to be easily scalable, laying the foundation for potential future enhancements and feature additions.
+        
+                    <br><br>
+                    <h4>llenges and Solutions</h4> 
+        
+                    Throughout the development process, I encountered challenges related to block movement and game speed dynamics. By leveraging effective debugging techniques and refining the logic, I successfully overcame these challenges to ensure smooth gameplay.
+        
+                    <br><br>
+                    <h4>visual Appeal</h4> 
+                    A strong emphasis was placed on creating a visually appealing game interface. The layout is designed for clarity, and the color scheme is chosen to enhance the overall gaming experience.
+        
+                    <br><br>
+                    <h4>Conclusion and Future Improvements</h4> 
+        
+                    This Tetris game project serves as a testament to my proficiency in front-end development. Moving forward, I plan to explore additional features, such as different block styles, multiplayer functionality, and further optimizations for enhanced user engagement.
+        
+                    </p>
         </div>
     </div>   
     <script src="tetris.js" type="module"></script>
+
+   
 </body>
 </html>

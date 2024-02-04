@@ -252,7 +252,7 @@ document.addEventListener("keydown", e => {
             changeDirection();
             break;
 
-        case 32:
+        case 16:
 
             dropBlock();
             break;
