@@ -162,10 +162,9 @@ function checkMatch(){
 function generateNewBlock() {
     clearInterval(downInterval);
 
-    // Increase speed every 25 points
-    if (score % 25 === 0 && score !== 0) {
-        duration -= 50; // Adjust the value as needed
-        showSpeedUpMessage();
+    // Increase speed every 10 points
+    if (score % 10 === 0 && score !== 0) {
+        duration -= 50; // Adjust the value as needed();
     }
 
     downInterval = setInterval(() => {
@@ -184,13 +183,6 @@ function generateNewBlock() {
     renderBlocks();
 }
 
-function showSpeedUpMessage() {
-    gameText.innerText = "Speed Up!";
-    gameText.style.display = "flex";
-    setTimeout(() => {
-        gameText.style.display = "none";
-    }, 1000);
-}
 
 
 //check the blank space and prevent blocks move to out of space
