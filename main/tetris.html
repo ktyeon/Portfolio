@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="tetris.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            async function fetchHtmlAsText(url) {
+                return await (await fetch(url)).text();
+            }
+    
+            async function importHeader() {
+                document.querySelector('#header').innerHTML = await fetchHtmlAsText('header.html');
+                // Now that the header is imported, you can safely add the event listener.
+                addToggleListener();
+            }
+    
+            importHeader();
+            
+            function addToggleListener() {
+                const toggleBtn = document.querySelector('.navbar__toggleBtn');
+                const menu = document.querySelector('.navbar__menu');
+    
+                toggleBtn.addEventListener('click', function () {
+                    menu.classList.toggle('active');
+                    icons.classList.toggle('active');
+
+                });
+            }
+        });
+    </script>
+
+    
+
+    <script src="header.js" defer></script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="wrapper">
+        <div class="game-text">
+            Game Over
+            <button>Restart</button>
+        </div>
+        <div class="score">0</div>
+        <div class="playground">
+            <ul></ul>
+        </div>
+    </div>   
+    <script src="tetris.js" type="module"></script>
+</body>
+</html>
