@@ -19,7 +19,6 @@ let downInterval;
 let tempMovingItem;
 
 
-
 // this is the position where the blocks are moving
 const movingItem = {
     type: "tree",
@@ -44,6 +43,7 @@ function init() {
     }
 
     generateNewBlock();
+
 
 }
 
@@ -159,25 +159,39 @@ function checkMatch(){
     generateNewBlock()
 }
 
-function generateNewBlock(){
-
+function generateNewBlock() {
     clearInterval(downInterval);
-    downInterval = setInterval(()=>{
-        moveBlock('top',1)
-    },duration)
-    
+
+    // Increase speed every 25 points
+    if (score % 25 === 0 && score !== 0) {
+        duration -= 50; // Adjust the value as needed
+        showSpeedUpMessage();
+    }
+
+    downInterval = setInterval(() => {
+        moveBlock('top', 1);
+    }, duration);
+
     const blockArray = Object.entries(BLOCKS);
-    const randomIndex = Math.floor(Math.random()* blockArray.length)
-    
+    const randomIndex = Math.floor(Math.random() * blockArray.length);
+
     movingItem.type = blockArray[randomIndex][0];
     movingItem.top = 0;
     movingItem.left = 3;
     movingItem.direction = 0;
 
-    tempMovingItem = { ...movingItem};
-    renderBlocks()
-
+    tempMovingItem = { ...movingItem };
+    renderBlocks();
 }
+
+function showSpeedUpMessage() {
+    gameText.innerText = "Speed Up!";
+    gameText.style.display = "flex";
+    setTimeout(() => {
+        gameText.style.display = "none";
+    }, 1000);
+}
+
 
 //check the blank space and prevent blocks move to out of space
 function checkEmpty(target){
@@ -266,3 +280,4 @@ restartButton.addEventListener("click",() => {
     init();
 
 })
+
