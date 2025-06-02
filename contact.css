@@ -1,0 +1,233 @@
+* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.main-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 900px;
+    padding: 2rem;
+    position: relative;
+    padding-left: 10px;
+}
+
+/* Navigation */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 858px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    font-size: 14px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+}
+
+.nav-links a:hover {
+    color: #7B8CDE;
+}
+
+/* Background Elements */
+.bg-circle-1 {
+    position: absolute;
+    top: -250px;
+    left: -600px;
+    width: 500px;
+    height: 500px;
+    background: #7B8CDE;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.bg-oval-work {
+    position: absolute;
+    top: 660px;
+    left: 5%;
+    width: 600px;
+    height: 100px;
+    background: rgba(123, 140, 222, 0.15);
+    border-radius: 300px / 50px;
+    transform: rotate(-25deg);
+    z-index: -1;
+}
+
+.bg-circle-project {
+    position: absolute;
+    top: 1200px;
+    left: -35px;
+    width: 600px;
+    height: 600px;
+    background: #7B8CDE;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.bg-oval-skills {
+    position: absolute;
+    top: 2200px;
+    right: 160%;
+    width: 600px;
+    height: 150px;
+    background: rgba(123, 140, 222, 0.15);
+    border-radius: 300px / 75px;
+    transform: rotate(20deg);
+    z-index: -1;
+}
+
+/* Contact Section */
+.contact-section {
+    position: relative;
+    z-index: 1;
+    align-self: center;
+}
+
+.contact-section h1 {
+    font-size: 32px;
+    margin-bottom: 3rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.2rem;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(123, 140, 222, 0.1);
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(123, 140, 222, 0.15);
+    border-color: #7B8CDE;
+}
+
+.contact-item i {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7B8CDE;
+    background: rgba(123, 140, 222, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover i {
+    background: #7B8CDE;
+    color: white;
+}
+
+.contact-item a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    flex: 1;
+    text-align: left;
+}
+
+.contact-item a:hover {
+    color: #7B8CDE;
+}
+
+/* Responsive adjustments for contact page */
+@media (max-width: 768px) {
+    .contact-section {
+        padding-top: 100px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .contact-section h1 {
+        font-size: 28px;
+        margin-bottom: 2rem;
+    }
+
+    .contact-links {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .contact-item {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .contact-item i {
+        font-size: 20px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .contact-item a {
+        font-size: 14px;
+    }
+
+    .bg-circle-1,
+    .bg-oval-work,
+    .bg-circle-project,
+    .bg-oval-skills {
+        display: none;
+    }
+}
+
