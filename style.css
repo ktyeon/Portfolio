@@ -95,11 +95,11 @@ body {
 
 .bg-circle-project {
     position: absolute;
-    top: 1200px;
-    left: -35px;
+    top: 1350px;
+    left: 32px;
     width: 600px;
     height: 600px;
-    background: #7B8CDE;
+    background: #5b75f85d;
     border-radius: 50%;
     z-index: -1;
 }
@@ -168,9 +168,9 @@ body {
 
 .others-btn {
     padding: 6px 16px;
-    border: 1px solid white;
+    border: 1px solid #333;
     border-radius: 20px;
-    color: white;
+    color: #333;
     text-decoration: none;
     font-size: 14px;
 }
@@ -200,13 +200,12 @@ body {
 }
 
 .project-item.blue {
-    background: #7B8CDE;
-    border: 0.5px solid #fff;
+    border: 0.5px solid #333;
 }
 
 .project-item.blue h3,
 .project-item.blue p {
-    color: white;
+    color: #333;
 }
 
 /* Section Styles */

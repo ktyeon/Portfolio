@@ -96,11 +96,11 @@ body {
 
 .bg-circle-project {
     position: absolute;
-    top: 1200px;
-    left: -35px;
+    top: 1350px;
+    left: 32px;
     width: 600px;
     height: 600px;
-    background: #7B8CDE;
+    background: #5b75f85d;
     border-radius: 50%;
     z-index: -1;
 }
