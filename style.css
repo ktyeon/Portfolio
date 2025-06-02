@@ -228,6 +228,8 @@ section h2 {
 
 .skill-category {
     margin-bottom: 0.5rem;
+    display: flex;
+    
 }
 
 .skill-category h3 {
