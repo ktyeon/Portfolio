@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taeyeon Kim - Tetris Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tetris.css">
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="logo">Portfolio</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="project.html">Project</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <!-- Background Elements -->
+        <div class="bg-circle-1"></div>
+        <div class="bg-oval-work"></div>
+        <div class="bg-circle-project"></div>
+        <div class="bg-oval-skills"></div>
+    </div>
+
+    <div class="container">
+        <section class="project-section">
+            <h1>JavaScript Tetris Game</h1>
+            
+            <div class="project-content">
+                <div class="game-container">
+                    <div class="game-text" style="display: none;">
+                        Game Over
+                        <button>Restart</button>
+                    </div>
+                    <div class="score">0</div>
+                    <div class="playground">
+                        <ul></ul>
+                    </div>
+                </div>
+
+                <div class="project-description">
+                    <h2>Overview</h2>
+                    <p>
+                        A modern implementation of the classic Tetris game using HTML, CSS, and JavaScript. 
+                        This project demonstrates front-end development skills while creating an engaging 
+                        and interactive gaming experience with progressive difficulty.
+                    </p>
+
+                    <h2>Game Controls</h2>
+                    <div class="controls-section">
+                        <div class="control-item">
+                            <span class="key">←  →</span>
+                            <span class="action">Move block left/right</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key">↑</span>
+                            <span class="action">Rotate block</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key">Shift</span>
+                            <span class="action">Quick drop</span>
+                        </div>
+                    </div>
+
+                    <h2>Technical Features</h2>
+                    
+                    <h3>Core Game Mechanics</h3>
+                    <ul>
+                        <li>Block movement and rotation system</li>
+                        <li>Line clearance and scoring mechanism</li>
+                        <li>Progressive difficulty with speed increase every 10 points</li>
+                    </ul>
+
+                    <h3>Technical Implementation</h3>
+                    <ul>
+                        <li>Responsive keyboard controls for user interaction</li>
+                        <li>Real-time game state management</li>
+                        <li>Dynamic score tracking and display</li>
+                        <li>Game over detection and restart functionality</li>
+                    </ul>
+
+                    <h3>Development Highlights</h3>
+                    <ul>
+                        <li>Clean, modular code architecture</li>
+                        <li>Efficient collision detection system</li>
+                        <li>Smooth animations and transitions</li>
+                        <li>Responsive design for various screen sizes</li>
+                    </ul>
+
+                    <h3>Future Enhancements</h3>
+                    <ul>
+                        <li>Additional block styles and themes</li>
+                        <li>Multiplayer functionality</li>
+                        <li>High score leaderboard</li>
+                        <li>Sound effects and background music</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="back-to-top">
+                <button class="topC" onclick="window.scrollTo(0,0);">TOP</button>
+            </div>
+        </section>
+    </div>
+
+    <style>
+        .project-section {
+            padding-top: 120px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .project-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .project-content {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-container {
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .controls-section {
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .control-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .control-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .key {
+            background: #7B8CDE;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-right: 1rem;
+            min-width: 60px;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        .action {
+            color: #333;
+        }
+
+        .project-description h2 {
+            color: #7B8CDE;
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        .project-description h3 {
+            color: #333;
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .project-description ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-description li {
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description li:before {
+            content: "•";
+            color: #7B8CDE;
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .back-to-top {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .topC {
+            cursor: pointer;
+            border: none;
+            background-color: #7B8CDE;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background-color 0.2s ease;
+        }
+
+        .topC:hover {
+            background-color: #6574b8;
+        }
+
+        @media (max-width: 768px) {
+            .project-section {
+                padding: 100px 1rem 2rem;
+            }
+
+            .project-section h1 {
+                font-size: 2rem;
+            }
+
+            .project-content {
+                padding: 1rem;
+            }
+
+            .controls-section {
+                padding: 1rem;
+            }
+
+            .key {
+                min-width: 50px;
+                padding: 0.25rem 0.5rem;
+            }
+        }
+    </style>
+
+    <script src="tetris.js" type="module"></script>
+</body>
+</html> 

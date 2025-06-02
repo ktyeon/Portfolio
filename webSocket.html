@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taeyeon Kim - WebSocket Chat Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="logo">Portfolio</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="project.html">Project</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <!-- Background Elements -->
+        <div class="bg-circle-1"></div>
+        <div class="bg-oval-work"></div>
+        <div class="bg-circle-project"></div>
+        <div class="bg-oval-skills"></div>
+    </div>
+
+    <div class="container">
+        <section class="project-section">
+            <h1>WebSocket Chat Service</h1>
+            
+            <div class="project-content">
+                <div class="project-image">
+                    <img src="../resources/websocket.gif" alt="WebSocket Chat Demo" style="max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0;">
+                </div>
+
+                <div class="project-description">
+                    <h2>Overview</h2>
+                    <p>
+                        A real-time chat service built using WebSocket technology and Socket.IO, featuring robust user authentication, 
+                        real-time messaging, and MongoDB integration. This project demonstrates expertise in architecting real-time 
+                        communication systems with a focus on scalability and user experience.
+                    </p>
+
+                    <div class="github-link">
+                        <a href="https://github.com/ktyeon/WebSocketChat" target="_blank" class="github-button">
+                            <i class="fa-brands fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+
+                    <h2>Key Features</h2>
+                    
+                    <h3>Real-Time Communication Architecture</h3>
+                    <ul>
+                        <li>WebSocket and Socket.IO implementation for bidirectional communication</li>
+                        <li>Efficient server-client data synchronization</li>
+                        <li>Event-driven architecture for real-time updates</li>
+                    </ul>
+
+                    <h3>User Management & Authentication</h3>
+                    <ul>
+                        <li>Robust user authentication system</li>
+                        <li>Real-time user presence tracking</li>
+                        <li>Automated system notifications for user activities</li>
+                    </ul>
+
+                    <div class="implementation-image">
+                        <img src="../resources/Socket.id.png" alt="Socket Implementation" style="max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0;">
+                        <img src="../resources/signin.png" alt="Sign In Implementation" style="max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0;">
+                    </div>
+
+                    <h3>MongoDB Integration</h3>
+                    <ul>
+                        <li>Persistent storage for chat messages and user data</li>
+                        <li>Custom controllers for user and chat management</li>
+                        <li>Efficient data retrieval and storage operations</li>
+                    </ul>
+
+                    <div class="implementation-image">
+                        <img src="../resources/mongodb.png" alt="MongoDB Integration" style="max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0;">
+                    </div>
+
+                    <h3>Technical Highlights</h3>
+                    <ul>
+                        <li>Error handling and logging system for reliability</li>
+                        <li>Scalable architecture for growing user base</li>
+                        <li>Asynchronous operations handling</li>
+                        <li>Enhanced user experience with system notifications</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="back-to-top">
+                <button class="topC" onclick="window.scrollTo(0,0);">TOP</button>
+            </div>
+        </section>
+    </div>
+
+    <style>
+        .project-section {
+            padding-top: 120px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .project-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .project-content {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-description h2 {
+            color: #7B8CDE;
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        .project-description h3 {
+            color: #333;
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .project-description ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-description li {
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description li:before {
+            content: "•";
+            color: #7B8CDE;
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .github-link {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .github-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background-color 0.2s ease;
+        }
+
+        .github-button:hover {
+            background-color: #000;
+        }
+
+        .implementation-image {
+            margin: 2rem 0;
+        }
+
+        .back-to-top {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .topC {
+            cursor: pointer;
+            border: none;
+            background-color: #7B8CDE;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background-color 0.2s ease;
+        }
+
+        .topC:hover {
+            background-color: #6574b8;
+        }
+
+        @media (max-width: 768px) {
+            .project-section {
+                padding: 100px 1rem 2rem;
+            }
+
+            .project-section h1 {
+                font-size: 2rem;
+            }
+
+            .project-content {
+                padding: 1rem;
+            }
+
+            .github-button {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</body>
+</html> 

@@ -254,6 +254,50 @@ h4 {
     background-color: #6574b8;
 }
 
+/* project card*/
+/* Project Section */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.project-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    position: relative;
+}
+
+.project-item {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: transparent;
+    border: 0.5px solid #333;
+}
+
+.project-item h3 {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.project-item p {
+    color: #333;
+}
+
+.project-item.blue {
+     border: 0.5px solid #333;
+}
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {

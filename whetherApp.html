@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taeyeon Kim - Weather App Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="logo">Portfolio</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="project.html">Project</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <!-- Background Elements -->
+        <div class="bg-circle-1"></div>
+        <div class="bg-oval-work"></div>
+    </div>
+
+    <div class="container">
+        <section class="project-section">
+            <h1>React Weather App</h1>
+            
+            <div class="project-content">
+                <div class="project-image">
+                    <img src="../resources/WeatherAppgif1.gif" alt="React Weather App Demo" style="max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0;">
+                </div>
+
+                <div class="project-description">
+                    <h2>Overview</h2>
+                    <p>
+                        A dynamic weather application that allows users to search for any city and receive real-time weather information along with appropriate dress code suggestions based on the current temperature.
+                    </p>
+
+                    <h2>Key Features</h2>
+                    
+                    <h3>OpenWeatherMap API Integration</h3>
+                    <ul>
+                        <li>Real-time weather data fetching based on user input</li>
+                        <li>Dynamic API URL construction with city name and API key</li>
+                        <li>Comprehensive weather details including temperature, feels-like temperature, wind speed, and humidity</li>
+                    </ul>
+
+                    <h3>Temperature Analysis</h3>
+                    <ul>
+                        <li>Automatic conversion from Kelvin to Celsius</li>
+                        <li>Dynamic temperature messages and corresponding images</li>
+                        <li>Temperature swing notifications for significant daily variations</li>
+                    </ul>
+
+                    <h3>Location-Aware Features</h3>
+                    <ul>
+                        <li>Local time and date calculation using timezone data</li>
+                        <li>User-friendly time format display</li>
+                        <li>Error handling for invalid city names</li>
+                    </ul>
+
+                    <h3>User Interaction</h3>
+                    <ul>
+                        <li>Interactive opinion system with real-time counter updates</li>
+                        <li>Dynamic "AccurateCircle" component displaying most selected opinions</li>
+                        <li>Hourly reset mechanism for opinion counts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="back-to-top">
+                <button class="topC" onclick="window.scrollTo(0,0);">TOP</button>
+            </div>
+        </section>
+    </div>
+
+    <style>
+        .project-section {
+            padding-top: 120px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .project-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .project-content {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-description h2 {
+            color: #7B8CDE;
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        .project-description h3 {
+            color: #333;
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .project-description ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-description li {
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description li:before {
+            content: "•";
+            color: #7B8CDE;
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .back-to-top {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .topC {
+            cursor: pointer;
+            border: none;
+            background-color: #7B8CDE;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background-color 0.2s ease;
+        }
+
+        .topC:hover {
+            background-color: #6574b8;
+        }
+
+        @media (max-width: 768px) {
+            .project-section {
+                padding: 100px 1rem 2rem;
+            }
+
+            .project-section h1 {
+                font-size: 2rem;
+            }
+
+            .project-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</body>
+</html> 

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taeyeon Kim - C# Console Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="logo">Portfolio</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="project.html">Project</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <!-- Background Elements -->
+        <div class="bg-circle-1"></div>
+        <div class="bg-oval-work"></div>
+        <div class="bg-circle-project"></div>
+        <div class="bg-oval-skills"></div>
+    </div>
+
+    <div class="container">
+        <section class="project-section">
+            <h1>C# Console Game</h1>
+            
+            <div class="project-content">
+                <div class="project-image">
+                    <img src="../resources/ConsoleGame.gif" alt="Console Game Demo" style="max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0;">
+                </div>
+
+                <div class="project-description">
+                    <h2>Overview</h2>
+                    <p>
+                        A console-based game implemented in C# where players navigate through falling objects (enemies) 
+                        to avoid collisions and accumulate points. This project demonstrates fundamental programming concepts 
+                        and C# capabilities while creating an engaging gaming experience.
+                    </p>
+
+                    <h2>Technical Features</h2>
+                    
+                    <h3>Core Game Development</h3>
+                    <ul>
+                        <li>Console application development using C# and .NET framework</li>
+                        <li>Implementation of game loop and user input handling</li>
+                        <li>Threading control for game speed management</li>
+                    </ul>
+
+                    <h3>Game Mechanics</h3>
+                    <ul>
+                        <li>Random enemy position generation</li>
+                        <li>Collision detection system</li>
+                        <li>Score tracking and management</li>
+                    </ul>
+
+                    <h3>Technical Implementation</h3>
+                    <ul>
+                        <li>Modular code organization across multiple files</li>
+                        <li>File I/O operations for ranking system</li>
+                        <li>Console window size and position control</li>
+                        <li>Robust exception handling for stability</li>
+                    </ul>
+
+                    <div class="implementation-image">
+                        <img src="../resources/score.png" alt="Score Implementation" style="max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0;">
+                    </div>
+
+                    <h3>Key Learning Outcomes</h3>
+                    <ul>
+                        <li>Understanding of C# fundamentals and .NET framework</li>
+                        <li>Experience with game loop implementation</li>
+                        <li>Practice with file operations and data persistence</li>
+                        <li>Implementation of basic threading concepts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="back-to-top">
+                <button class="topC" onclick="window.scrollTo(0,0);">TOP</button>
+            </div>
+        </section>
+    </div>
+
+    <style>
+        .project-section {
+            padding-top: 120px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .project-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .project-content {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-description h2 {
+            color: #7B8CDE;
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        .project-description h3 {
+            color: #333;
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .project-description ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-description li {
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description li:before {
+            content: "•";
+            color: #7B8CDE;
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .implementation-image {
+            margin: 2rem 0;
+        }
+
+        .back-to-top {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .topC {
+            cursor: pointer;
+            border: none;
+            background-color: #7B8CDE;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background-color 0.2s ease;
+        }
+
+        .topC:hover {
+            background-color: #6574b8;
+        }
+
+        @media (max-width: 768px) {
+            .project-section {
+                padding: 100px 1rem 2rem;
+            }
+
+            .project-section h1 {
+                font-size: 2rem;
+            }
+
+            .project-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</body>
+</html> 
