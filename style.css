@@ -38,6 +38,10 @@ body {
     
 }
 
+.work-experience li{
+    margin-left: 30px;
+}
+
 /* Top Navigation */
 .top-nav {
     display: flex;
