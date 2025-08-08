@@ -1,191 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taeyeon Kim - Projects</title>
-    <link rel="stylesheet" href="project.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taeyeon Kim – Projects</title>
+  <link rel="stylesheet" href="project.css"/>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="top-nav">
-        <div class="logo">Portfolio</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="project.html">Project</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-
-    <div class="main-wrapper">
-        <!-- Background Elements -->
-        <div class="bg-circle-1"></div>
-        <div class="bg-oval-work"></div>
-        <div class="bg-circle-project"></div>
-        <div class="bg-oval-skills"></div>
+  <!-- Navigation -->
+  <nav class="top-nav" aria-label="Primary">
+    <a class="logo">Portfolio</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="project.html" aria-current="page">Projects</a>
+      <a href="contact.html">Contact</a>
     </div>
+  </nav>
 
-    
-    <div class="container">
-        <section class="projects-detail">
-            <h1>Personal Project</h1>
+  <!-- Background Elements -->
+  <div class="main-wrapper" aria-hidden="true">
+    <div class="bg-circle-1"></div>
+    <div class="bg-oval-work"></div>
+    <div class="bg-circle-project"></div>
+    <div class="bg-oval-skills"></div>
+  </div>
 
-            <!-- Project Section -->
-        <section class="projects">
-            <div class="project-header">
-        
-            </div>
-            <div class="project-grid">
-                <a href="whetherApp.html" class="project-item">
-                    <h3>React</h3>
-                    <p>Weather App</p>
-                </a>
-                <a href="cSharpProject.html" class="project-item blue">
-                    <h3>C#</h3>
-                    <p>Console Game</p>
-                </a>
-                <a href="webSocket.html" class="project-item">
-                    <h3>WebSocket</h3>
-                    <p>Chat</p>
-                </a>
-                <a href="tetris.html" class="project-item blue">
-                    <h3>JS</h3>
-                    <p>Tetris Game</p>
-                </a>
-            </div>
+  <main class="container">
+    <header class="projects-detail">
+      <h1>Personal Projects</h1>
+    </header>
 
-                <div class="project-item">
-                <div class="project-header">
-                    <h3>K Mart | Shopify website</h3>
-                    <span class="date">2025.8 – 2025.8</span>
-                </div>
+    <!-- Small demos grid -->
+    <section class="projects" aria-label="Small demos">
+      <div class="project-grid">
+        <a href="weatherApp.html" class="project-item" aria-label="React Weather App">
+          <h3>React</h3>
+          <p>Weather App</p>
+        </a>
+        <a href="webSocket.html" class="project-item" aria-label="WebSocket Chat">
+          <h3>WebSocket</h3>
+          <p>Chat</p>
+        </a>
+      </div>
+    </section>
 
-                <h4>Frontend</h4>
-                <p>Built a Korean grocery online store targeting local customers in Canada using the Shopify platform</p>
-                <ul>
-                    <li>Developed a Shopify website using GraphQL and Liquid.</li>
-                    <li>Implemented a custom theme to enhance the user experience.</li>
-                    <li>Utilized GraphQL queries to fetch product data efficiently.</li>
-                    <li>Ensured responsive design for optimal viewing on various devices.</li>
-                </ul>
+    <!-- K Mart -->
+    <article class="project-item">
+      <div class="project-header">
+        <h2>K Mart · Shopify Website</h2>
+        <time class="date" datetime="2025-08">Aug 2025</time>
+      </div>
+      <h3>Frontend</h3>
+      <p>Built a Korean grocery online store for local customers in Canada using Shopify.</p>
+      <ul>
+        <li>Developed a custom theme with Liquid and GraphQL.</li>
+        <li>Implemented collection/product templates and optimized UX for mobile.</li>
+        <li>Used GraphQL queries to efficiently fetch product data.</li>
+        <li>Ensured responsive layout and improved navigation discoverability.</li>
+      </ul>
 
-                <div class="project-images">
-                     <div class="image-section">
-                        <img src="resources/shopify_demo.gif" alt="shopify demo">
-                    </div>
-      
-                    <div class="image-section"> 
-                        <img src="resources/GraphQL_query.png" alt="graphQL">
-                        <p class="description">
-                        GraphQL query to get the product information from Shopify.<br>
-                        The query retrieves the product's title, description, and price.
-                        </p>
-                    </div>
+      <div class="project-images">
+        <figure class="image-section">
+          <img src="resources/shopify_demo.gif" alt="K Mart Shopify theme demo" loading="lazy"/>
+          <figcaption class="sr-only">K Mart Shopify theme demo animation</figcaption>
+        </figure>
 
-                    <div class="image-section">
-                        <img src="resources/fetch.png" alt="fetch">
-                        <p class="description">
-                            Fetching the data from the GraphQL API using the fetch function.<br>
-                            The response is then converted to JSON format for further processing.
-                        </p>
+        <figure class="image-section">
+          <img src="resources/GraphQL_query.png" alt="Example Shopify GraphQL product query" loading="lazy"/>
+          <figcaption class="description">
+            GraphQL query to fetch product fields (title, description, price).
+          </figcaption>
+        </figure>
 
-                    </div>
-                </div>
+        <figure class="image-section">
+          <img src="resources/fetch.png" alt="Fetching data with fetch and parsing JSON" loading="lazy"/>
+          <figcaption class="description">
+            Fetching from the Storefront API and parsing the JSON response.
+          </figcaption>
+        </figure>
+      </div>
+    </article>
 
+    <!-- PickEco -->
+    <article class="project-item">
+      <div class="project-header">
+        <h2>PickEco · Mobile Application</h2>
+        <time class="date" datetime="2022-09">Sep 2022 – Dec 2022</time>
+      </div>
+      <h3>Frontend Developer & QA</h3>
+      <p>Collaborated with PickEco to build a mobile app aligned with client requirements.</p>
+      <ul>
+        <li>Wrote test cases; tested across OS to identify bugs and inconsistencies.</li>
+        <li>Conducted unit testing in React.</li>
+        <li>Built with React Native; tested via Expo Go.</li>
+        <li>Designed a clean, user-friendly UI; prototyped in Figma.</li>
+        <li>Managed issues with ZenHub in an Agile workflow.</li>
+      </ul>
+    </article>
 
-            </div>
+    <!-- Reaction Time -->
+    <article class="project-item">
+      <div class="project-header">
+        <h2>Average Reaction Time</h2>
+        <time class="date" datetime="2022-07">Jul 2022</time>
+      </div>
+      <p>Calculates a user’s average reaction speed after three button clicks.</p>
+      <ul>
+        <li>Tech: JavaScript, CSS3, HTML5</li>
+        <li class="git-link">
+          Git:
+          <a href="https://github.com/Taeyeon-dev/ReactSpeed" target="_blank" rel="noopener noreferrer">
+            https://github.com/Taeyeon-dev/ReactSpeed
+          </a>
+        </li>
+      </ul>
+    </article>
 
-            <div class="project-item">
-                <div class="project-header">
-                    <h3>PickEco | Mobile application</h3>
-                    <span class="date">2022.9 – 2022.12</span>
-                </div>
-                <h4>Frontend Developer and QA</h4>
-                <p>Collaborating with Company PickEco, Creating a Mobile Application as per the client's requirements</p>
-                <ul>
-                    <li>Created test cases and performed testing on a prototype to identify bugs and inconsistencies across different operating systems.</li>
-                    <li>Conducted unit testing in React.</li>
-                    <li>Developed an application using React Native and tested it using Expo Go.</li>
-                    <li>Designed a clean and user-friendly graphical user interface (GUI) and created a prototype of an application using Figma.</li>
-                    <li>Managed the project using ZenHub in an Agile environment.</li>
-                </ul>
-            </div>
+    <!-- Square -->
+    <article class="project-item">
+      <div class="project-header">
+        <h2>Square · Website</h2>
+        <time class="date" datetime="2022-05">May 2022 – Jun 2022</time>
+      </div>
+      <h3>Full-Stack Developer</h3>
+      <p>Forum website for discussions, info sharing, and replies. Supports CRUD and file uploads.</p>
+      <ul>
+        <li>Java web application with dynamic pages (JavaScript, jQuery).</li>
+        <li>AJAX used for unique email/ID checks during sign-up.</li>
+        <li class="git-link">
+          Git:
+          <a href="https://github.com/Taeyeon-dev/Square" target="_blank" rel="noopener noreferrer">
+            https://github.com/Taeyeon-dev/Square
+          </a>
+        </li>
+      </ul>
 
-            <div class="project-item">
-                <div class="project-header">
-                    <h3>Calculate the average reaction time</h3>
-                    <span class="date">2022.7 – 2022.7</span>
-                </div>
-                <p>Application to calculate the average reaction speed of the user after clicking the button three times.</p>
-                <ul>
-                    <li>Used JavaScript, CSS3, HTML5</li>
-                    <li class="git-link">Git: <a href="https://github.com/Taeyeon-dev/ReactSpeed.git">https://github.com/Taeyeon-dev/ReactSpeed.git</a></li>
-                </ul>
-            </div>
+      <div class="project-images">
+        <figure class="image-section">
+          <figcaption>Main page</figcaption>
+          <img src="resources/mainPage.png" alt="Square main page UI" loading="lazy"/>
+        </figure>
+        <figure class="image-section">
+          <figcaption>Sign-in page</figcaption>
+          <img src="resources/SignPage.png" alt="Square sign-in page UI" loading="lazy"/>
+        </figure>
+        <figure class="image-section">
+          <figcaption>ID availability check</figcaption>
+          <img src="resources/IdCheck.png" alt="AJAX-based ID check flow" loading="lazy"/>
+          <p class="description">
+            Disables sign-up if ID is unavailable. AJAX request checks duplicates; returns flags for UI state.
+          </p>
+        </figure>
+      </div>
+    </article>
 
-            <div class="project-item">
-                <div class="project-header">
-                    <h3>Square | Website</h3>
-                    <span class="date">2022.5 – 2022.6</span>
-                </div>
-                <h4>Full Stack Developer</h4>
-                <p>Square is a forum website to discuss various opinions, share information, and reply. It allows users to write, read, edit, delete posts, and upload files.</p>
-                <ul>
-                    <li>Developed a Java web application.</li>
-                    <li>Dynamic web pages that ensure the adaptability of updated data by using JavaScript and jQuery.</li>
-                    <li>Used Asynchronous JavaScript and XML(Ajax) to ensure the users have unique emails and ids while checking the existing data.</li>
-                    <li class="git-link">Git: <a href="https://github.com/Taeyeon-dev/Square.git">https://github.com/Taeyeon-dev/Square.git</a></li>
-                </ul>
-                <div class="project-images">
-                    <div class="image-section">
-                        <p>Main page</p>
-                        <img src="resources/mainPage.png" alt="mainPage">
-                    </div>
-                    <div class="image-section">
-                        <p>Sign in Page</p>
-                        <img src="resources/SignPage.png" alt="signPage">
-                    </div>
-                    <div class="image-section">
-                        <p>ID check</p>
-                        <img src="resources/IdCheck.png" alt="idcheck">
-                        <p class="description">
-                            Set the sign up button as disabled if id is not available.<br>
-                            Create function idCheck when user click the check button to call the ajax method (Which url is called and What value would send when asked).<br>
-                            Count the number of matching id values and if greater than 0, fail = "NNNNNNN" , or same with 0 success = "NNNNNY"
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <!-- BK4U -->
+    <article class="project-item">
+      <div class="project-header">
+        <h2>Book For You (BK4U) · Website</h2>
+        <time class="date" datetime="2021-06">Jun 2021 – Aug 2021</time>
+      </div>
+      <h3>Full-Stack Developer</h3>
+      <p>Book rental service. Users select genres; admin curates and sends titles.</p>
+      <ul>
+        <li>Full-stack Spring Framework web app.</li>
+        <li>Wrote table specs and data management docs.</li>
+        <li>Modeled requirements with UML use-case diagrams.</li>
+        <li>Used JSON for client–server data exchange.</li>
+        <li>Built search and paging with MyBatis + Oracle.</li>
+        <li class="git-link">
+          Git:
+          <a href="https://github.com/Taeyeon-dev/BookForYou" target="_blank" rel="noopener noreferrer">
+            https://github.com/Taeyeon-dev/BookForYou
+          </a>
+        </li>
+      </ul>
 
-            <div class="project-item">
-                <div class="project-header">
-                    <h3>Book for you (BK4U) | Website</h3>
-                    <span class="date">2021.6 – 2021.8</span>
-                </div>
-                <h4>Full Stack Developer</h4>
-                <p>BK4U is a book rental service website. Users select book genres of book. The admin checks the user's interest and then sends several books randomly to the user.</p>
-                <ul>
-                    <li>Developed and designed full stack Spring framework web application.</li>
-                    <li>Writing a Table Specification during this project taught me systematic documentation of data structures and data management strategies.</li>
-                    <li>Using Use Case Diagrams in UML to model the functionality of a system and the interactions between users and conduct requirements analysis.</li>
-                    <li>When a user logs in or performs an action, JSON is used for transmitting data from the client to the server and receiving a response from the server.</li>
-                    <li>Used MyBatis connected with Oracle to build a search function and request a page list.</li>
-                    <li class="git-link">Git: <a href="https://github.com/Taeyeon-dev/BookForYou.git">https://github.com/Taeyeon-dev/BookForYou.git</a></li>
-                </ul>
-                <div class="project-images">
-                    <div class="image-section">
-                        <p>ERD Diagram</p>
-                        <img src="resources/ERD_bk4u.png" alt="erd">
-                    </div>
-                    <div class="image-section">
-                        <p>USECASE Diagram</p>
-                        <img src="resources/usecase diagram.jpg" alt="usecase">
-                    </div>
-                </div>
-            </div>
+      <div class="project-images">
+        <figure class="image-section">
+          <figcaption>ERD diagram</figcaption>
+          <img src="resources/ERD_bk4u.png" alt="BK4U database ERD" loading="lazy"/>
+        </figure>
+        <figure class="image-section">
+          <figcaption>Use-case diagram</figcaption>
+          <img src="resources/usecase diagram.jpg" alt="BK4U UML use-case diagram" loading="lazy"/>
+        </figure>
+      </div>
+    </article>
 
-            <button class="top-button" onclick="window.scrollTo(0,0);">TOP</button>
-        </section>
-    </div>
+    <button class="top-button" type="button" aria-label="Back to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+      TOP
+    </button>
+  </main>
 </body>
-</html> 
+</html>
