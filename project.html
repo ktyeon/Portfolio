@@ -52,31 +52,83 @@
       </div>
       <h3>Frontend</h3>
       <p>Built a Korean grocery online store for local customers in Canada using Shopify.</p>
+      <br>
+      
+      <p>Shopify Liquid Utilization   </p>
       <ul>
-        <li>Developed a custom theme with Liquid and GraphQL.</li>
-        <li>Implemented collection/product templates and optimized UX for mobile.</li>
-        <li>Used GraphQL queries to efficiently fetch product data.</li>
-        <li>Ensured responsive layout and improved navigation discoverability.</li>
+        <li>
+          Handling routes.root_url and defining collection handles (collections['new-arrival'])
+        </li>
+        <li>
+          Implementing multi-language (locale) support and building an i18n dictionary
+        </li>
       </ul>
+      
+      <p>
+        GraphQL API Usage
+      </p>
+
+      <ul>
+        <li>
+          Fetching product data using GraphQL queries to retrieve product details like name, image, price, and inventory status.
+        </li>
+        <li>
+          Retrieving product name, image, price, and inventory status in a single request
+        </li>
+        <li>
+          Using GraphQL to fetch product details efficiently, reducing the number of API calls    
+        </li>
+        <li>
+          Sorting by newest first (sortKey: CREATED, reverse: true)
+        </li>
+
+      </ul>
+
+
+        <p>
+          UI/UX Implementation
+        </p>
+        <ul>
+          <li>
+            Responsive carousel with cloned slides, infinite loop, auto-slide, and manual navigation buttons
+          </li>
+          <li>
+            Automatically adjusting the number of visible cards for desktop, tablet, and mobile
+          </li>
+          <li>
+            Add to Cart button with out-of-stock handling
+          </li>
+          <li>
+            Handling API error messages, missing tokens, and empty collections gracefully
+          </li>
+
+        </ul>
 
       <div class="project-images">
         <figure class="image-section">
-          <img src="resources/shopify_demo.gif" alt="K Mart Shopify theme demo" loading="lazy"/>
-          <figcaption class="sr-only">K Mart Shopify theme demo animation</figcaption>
+          <img src="resources/demo-shopify.gif" alt="K Mart Shopify theme demo" loading="lazy"/>
+        </figure>
+
+          <figure class="image-section">
+          <img src="resources/slide-html.png" alt="Example Shopify GraphQL product query" loading="lazy"/>
+        
         </figure>
 
         <figure class="image-section">
-          <img src="resources/GraphQL_query.png" alt="Example Shopify GraphQL product query" loading="lazy"/>
-          <figcaption class="description">
-            GraphQL query to fetch product fields (title, description, price).
-          </figcaption>
+          <img src="resources/slide-loader.png" alt="Example Shopify GraphQL product query" loading="lazy"/>
+        
         </figure>
 
         <figure class="image-section">
-          <img src="resources/fetch.png" alt="Fetching data with fetch and parsing JSON" loading="lazy"/>
-          <figcaption class="description">
-            Fetching from the Storefront API and parsing the JSON response.
-          </figcaption>
+          <img src="resources/slide-loader2.png" alt="Fetching data with fetch and parsing JSON" loading="lazy"/>
+      
+        </figure>
+
+        </figure>
+
+          <figure class="image-section">
+          <img src="resources/collection-section.png" alt="Example Shopify GraphQL product query" loading="lazy"/>
+        
         </figure>
       </div>
     </article>
